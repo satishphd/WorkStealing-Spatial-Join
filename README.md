@@ -1,6 +1,6 @@
 # WorkStealing-Spatial-Join
 Spatial Join Load balancing using Work Stealing
-# geospatial_join_work_stealing
+# Parallel Geospatial Join by Work Stealing
 
 Repository for geo-spatial join using work stealing.
 
@@ -29,19 +29,19 @@ To efficiently compute on a multiple instruction, multiple data (MIMD) style par
 
 ## 3. Directory Structure. ##
 
-[inclue](https://github.com/Jayyee-HPC/geospatial_join_work_stealing/tree/main/include)
+[inclue]
 Headers
 
-[src](https://github.com/Jayyee-HPC/geospatial_join_work_stealing/tree/main/src)
+[src]
 Source files
 
-[tests](https://github.com/Jayyee-HPC/geospatial_join_work_stealing/tree/main/tests)
+[tests]
 Test files
 
 Object files will be in bin folder. 
 
 _makefile_ and executable _prog_ are in 
-[main dir](https://github.com/Jayyee-HPC/geospatial_join_work_stealing/tree/main).
+[main dir]
 
 ## 4. Prerequisties. ##
 
