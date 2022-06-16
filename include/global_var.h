@@ -1,0 +1,66 @@
+#ifndef __GSJ_GLOBAL_VAR_H_INCLUDE__
+#define __GSJ_GLOBAL_VAR_H_INCLUDE__
+
+/* Compiler instructions*/
+#define USE_UNSTABLE_GEOS_CPP_API
+#define DEBUG
+#define NUMA_ENABLED
+
+/* Choose spatial join operations */
+#define USE_ST_INTERSECTION 1
+//#define USE_ST_INTERSECTS 1
+//#define USE_ST_UNION 1
+
+/* Global Variables */
+#define ELEM_PER_PROC 2
+#define ITERATIONS_PER_CHECK_JOB_REQUEST 100
+#define NUM_JOBS_TO_MARK_FINISHED 128
+#define NUM_JOBS_TO_SEND 128
+#define ALL_LOCAL_JOB_NOT_COMPLETED 0xFFFF0001
+#define STARVE_PROCESS_WAITING 0xFFFF0002
+#define ALL_LOCAL_JOB_COMPLETED 0xFFFF0003
+#define THRESH_HOLD_FOR_TRANS_JOBS 100
+#define SEND_BUF_0_SIZE 4
+#define NUM_THIVES 35
+#define NUM_THREADS 36
+#define TASKS_PER_JOB 20
+#define INIT_VICTIM -1
+#define NO_MORE_VICTIM -2
+
+// for mpi
+#define LOCAL_TASKS_NOT_PUSHED 0
+#define LOCAL_TASKS_PUSHED 1
+#define LOCAL_TASKS_DONE 2
+#define ACK_TAG 777
+#define ISEND_TARGETS_CAP 100
+#define RMA_NOT_READY 0x00FFFFFF
+#define WAIT_FOR_TASKS_REQUEST 0x00000000
+#define REQUEST_FOR_TASKS 0x000000FF
+#define TEMP_STOP_SIGN_NB_SENDRECV 0x00000FFF
+#define STOP_SIGN_NB_SENDRECV 0x0000FFFF
+#define ALL_LOCAL_TASKS_COMPLETED 0xFFFFFFFF
+
+#define RECV_TASKS_JOIN_RATE 0.9
+
+// 5 GB
+#define MINIMAL_FREE_MEMORY 5368709120
+// 10 GB
+#define MINIMAL_RESUME_MEMORY 10737418240
+
+#define MAX_32_T_INT 0x7FFFFFFF
+
+//Every send no more than 5 million points, that is 10 million doubles, 16MB.
+#define SEND_TASK_MAX_NUM_POINTS 5242880 
+#define NUM_TASK_FLOW_CONTROL 50000
+
+// for geom converting
+#define GEOM_TYPE_POLYGON 1
+#define GEOM_TYPE_LINESTRING 2
+#define GEOM_TYPE_POINT 3
+#define GEOM_TYPE_OTHER 0 
+
+/* Types */
+typedef unsigned int uint;
+typedef unsigned long ulong;
+
+#endif //ndef __GSJ_GLOBAL_VAR_H_INCLUDE__
