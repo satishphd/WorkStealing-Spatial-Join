@@ -1,5 +1,5 @@
 # WorkStealing-Spatial-Join
-Spatial Join Load balancing using Work Stealing
+Spatial Join Load balancing using Work Stealing (Author: PhD Student)
 # Parallel Geospatial Join by Work Stealing
 
 Repository for geo-spatial join using work stealing.
