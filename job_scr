@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#SBATCH --job-name="result"
+#SBATCH --output="%x_%j.out"
+#SBATCH --partition=bdwall
+#SBATCH --time=00:05:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=36
+
+#module load
+module load gcc/8.2.0-g7hppkz
+module load intel-mpi/2018.4.274-ozfo327
+#module load openmpi/3.1.3-bebop-gptpb2w
+#echo commands to stdout
+#set -x
+
+
+#move to your appropriate pylon5 directory
+cd /home/jie.yang/test/2106_ws_mpi/geospatial_join_work_stealing
+
+#set variable so that task placement works as expected
+#export HFI_NO_CPUAFFINITY=1
+#export HFI_UNIT=2
+export I_MPI_JOB_RESPECT_PROCESS_PLACEMENT=0
+
+
+#run program
+#./prog ~/data/parks_data ~/data/lakes_data
+#./prog 2055 /lcrc/project/MPI/jy_temp/data/lakes_q_grid_2048_parks/ /lcrc/project/MPI/jy_temp/data/parks_q_grid_2048_lakes/ 
+#./prog 2055 /lcrc/project/MPI/jy_temp/data/lakes_q_grid_2048_sports/ /lcrc/project/MPI/jy_temp/data/sports_q_grid_2048_lakes/ 
+#./prog 516 /lcrc/project/MPI/jy_temp/data/cemet_q_grid_512_sports/ /lcrc/project/MPI/jy_temp/data/sports_q_grid_512_cemet/ 
+#./prog 8250 /lcrc/project/MPI/jy_temp/data/lakes_adp_8192_sports/ /lcrc/project/MPI/jy_temp/data/sports_adp_8192_lakes/ 
+
+mpirun -np 2 ./prog ~/data/sports_data ~/data/cemet_data 
+#./prog 2055 /lcrc/project/MPI/jy_temp/data/lakes_q_grid_2048_sports/ /lcrc/project/MPI/jy_temp/data/sports_q_grid_2048_lakes/
+
