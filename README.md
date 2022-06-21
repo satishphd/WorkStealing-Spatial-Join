@@ -34,6 +34,12 @@ Headers
 
 [src]
 Source files
+spatial_join.cpp contains sequential intersects and intersection based spatial join using GEOS library.
+reader.cpp contains reading and parsing of geometries in WKT and WKB format. There are multi-thread methods to speedup parsing and I/O tasks.
+
+thread_util.cpp  contains multi-threaded shared memory implementation of workstealing based load balancing for spatial join. It uses C++ threads for parallelization.
+
+mpi_util.cpp contains distributed memory implementation running on a HPC compute cluster  using Message Passing Interface for workstealing based load balancing.
 
 [tests]
 Test files
