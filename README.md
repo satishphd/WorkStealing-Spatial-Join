@@ -60,7 +60,7 @@ g++ 7.1.0 or later (support for c++17 needed).
 
 ## 5. Installation. ##
 
-_make_ if prerequisties are met. 
+_make_ if prerequisites are met. 
 
 _prog_ is the excutable file.
 
