@@ -68,7 +68,7 @@ _prog_ is the excutable file.
 ./prog /path/to/file
 ```
 
-## 6 Exteranal Links. ##
+## 6 External Links. ##
 
 [Homepage of our lab](https://www.cs.mu.edu/~satish/)
 
